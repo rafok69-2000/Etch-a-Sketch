@@ -6,7 +6,7 @@ btnCreate.addEventListener("click", () => {
     if(square > 100){
         alert("Sorry, try again, invalid number");
     }
-    createGrid()
+    createGrid(square)
 })
 
 function createGrid(size = 16){
