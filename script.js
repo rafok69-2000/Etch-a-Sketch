@@ -1,5 +1,6 @@
 const divWrap = document.querySelector("#wrap");
 const btnCreate = document.querySelector("#create");
+
 btnCreate.addEventListener("click", () => {
     createGrid(prompt("Insert the size"))
 })
@@ -17,6 +18,9 @@ function createGrid(size = 16){
     square.style.boxSizing = 'border-box';
     square.style.border = '1px solid black';
     divWrap.appendChild(square);
+    square.addEventListener("mouseenter", () => {
+    square.style.backgroundColor = "black";
+})
     }
 }
 
