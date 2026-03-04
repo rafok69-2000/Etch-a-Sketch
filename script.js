@@ -2,7 +2,11 @@ const divWrap = document.querySelector("#wrap");
 const btnCreate = document.querySelector("#create");
 
 btnCreate.addEventListener("click", () => {
-    createGrid(prompt("Insert the size"))
+    let square = prompt("Insert the size (1 to 100):");
+    if(square > 100){
+        alert("Sorry, try again, invalid number");
+    }
+    createGrid()
 })
 
 function createGrid(size = 16){
